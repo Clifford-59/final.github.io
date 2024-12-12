@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Tech Store</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        header, nav, section, aside {
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>G-Tech Store</h1>
+        <p>Your one-stop shop for all your needs!</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('about')">About Us</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Our Featured Products</h2>
+        <div class="products">
+            <div class="product">
+                <img src="IMG1.WEBP" alt="Product 1">
+                <h3>CPU's</h3>
+                <p>Intel and Ryzen</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="IMG2.JFIF" alt="Product 2">
+                <h3>Graphics Card</h3>
+                <p>Gigabyte</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="IMG3.JFIF" alt="Product 3">
+                <h3>Ram Memory</h3>
+                <p>DDR4 & DDR5</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section (hidden initially) -->
+    <section id="about" class="hidden">
+        <h2>About Us</h2>
+        <p>At G-Tech Store, we are committed to providing high-quality tech products that meet your needs. Whether you're building a gaming rig or upgrading your office setup, we have the products to help you succeed.</p>
+        <p>We started with a vision to create a tech store that not only offers the latest products but also exceptional customer service.</p>
+    </section>
+
+    <!-- Contact Section (hidden initially) -->
+    <section id="contact" class="hidden">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us!</p>
+        <form action="#" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <!-- Advertisement Section -->
+    <aside class="advertisement">
+        <h2>Special Offer!</h2>
+        <p>Get 20% off on your first purchase!</p>
+    </aside>
+
+    <!-- JavaScript to toggle between sections -->
+    <script>
+        function showSection(section) {
+            // Hide all sections
+            document.getElementById('home').classList.add('hidden');
+            document.getElementById('about').classList.add('hidden');
+            document.getElementById('contact').classList.add('hidden');
+            
+            // Show the selected section
+            document.getElementById(section).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
